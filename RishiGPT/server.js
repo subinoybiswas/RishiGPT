@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const { Configuration, OpenAIApi } = require("openai");
+conf = require("./api");
 
 app.listen(3000, () => {
   console.log("Application started and Listening on port 3000");
@@ -14,7 +15,7 @@ app.get("/", (req, res) => {
 });
 //HTML-CSS
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: ,
 });
 
 app.post("/userdata", (req, res) => {
@@ -34,11 +35,12 @@ app.post("/userdata", (req, res) => {
           role: "user",
           content:
             "Assume you are a Hindu saint from old times and posess knowledge of hindu scriptures like the Veda,Gita,Mahabharata,Ramayana and many more. You would call be as My Child and answer this question:" +
-            ques,
+            ques +
+            "If your response is small add some small quotations of about 100words from any scriptures and make the complete response about 190 words and don't have unfinished sentences",
         },
       ],
       temperature: 0.2,
-      max_tokens: 200,
+      max_tokens: 500,
       top_p: 1,
       frequency_penalty: 0,
       presence_penalty: 0,

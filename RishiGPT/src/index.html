@@ -5,31 +5,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />
-    <title>GPT</title>
+    <link rel="icon" type="image/x-icon" href="rishi.gif" />
+    <title>RishiGPT</title>
   </head>
   <body>
     <div class="all">
       <div class="picture"><img src="rishi.gif" /></div>
       <h1>Ask anything child</h1>
+      <h2>All your questions answered by Rishi</h2>
       <div class="search">
-        <input id="query" type="text" placeholder="Try asking what is life?" />
+        <input
+          id="query"
+          type="text"
+          placeholder="Try asking what is life?"
+          autocomplete="off"
+        />
       </div>
       <button onclick="search()">Search</button>
     </div>
 
     <div class="res" id="resp">
       <div class="txt">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos magni
-        quasi d autem doloribus quia consectetur asperiores atque consequatur
-        nostrum optio at rerum quidem, tempore, possimus dolorum similique iste.
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat
-        officiis sequi quae nihil. Et hic reiciendis ducimus nemo inventore quas
-        delectus molestias? Alias numquam cupiditate velit quo, unde et
-        corporis.
+        <div>
+          <p>
+            RishiGPT is an AI-powered conversational agent that is designed to
+            act like a Rishi and possess knowledge of Hindu scriptures such as
+            Vedas, Gita, Ramayana, and much more. This chatbot is built using
+            the state-of-the-art Gpt3 model configured with "gpt-3.5-turbo" for
+            superior performance and accuracy.
+          </p>
+        </div>
+
+        <div>
+          <p>
+            The frontend of RishiGPT is built using HTML, CSS, and client-side
+            Javascript, which ensures a seamless and responsive user interface.
+            The backend is configured using Node.js with Express.js installed,
+            which enables it to handle user requests and respond to them in
+            real-time.
+          </p>
+        </div>
+
+        <div>
+          <p>
+            RishiGPT is an excellent tool for anyone who wishes to explore and
+            learn about Hindu scriptures. It can engage in conversations with
+            users, answer their questions, and provide insights into various
+            aspects of Hinduism. Its knowledge of the scriptures is extensive,
+            making it a valuable resource for individuals seeking to deepen
+            their understanding of the religion.
+          </p>
+        </div>
       </div>
-      <span class="loader"></span>
+      <div class="loader">
+        <img id="img1" src="animation_500_lfy5seok.gif" />
+      </div>
     </div>
-    <div class="credit">Developed by Subinoy Biswas</div>
+    <div class="credit">
+      <div class="img-div">
+        <a href="https://linktr.ee/heysubinoy"><img id="credit-img" src="icons8-developer-64.png" /></a>
+      </div>
+      <a href="https://linktr.ee/heysubinoy" class="social" label="Socials"
+        >Developed by Subinoy Biswas</a
+      >
+    </div>
     <script src="work.js"></script>
   </body>
 </html>
