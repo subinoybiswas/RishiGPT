@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 //HTML-CSS
 const configuration = new Configuration({
-  apiKey: ,
+  apiKey: process.env.API_KEY,
 });
 
 app.post("/userdata", (req, res) => {
