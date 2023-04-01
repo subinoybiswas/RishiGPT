@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const { Configuration, OpenAIApi } = require("openai");
-conf = require("./api");
+
 
 app.listen(3000, () => {
   console.log("Application started and Listening on port 3000");

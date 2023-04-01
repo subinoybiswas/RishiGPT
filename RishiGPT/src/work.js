@@ -12,6 +12,7 @@ xhr.onload = function () {
   if (xhr.status === 200) {
     console.log(xhr.responseText);
     resp[0].innerHTML = xhr.responseText;
+    resp[0].scrollIntoView();
   } else {
     console.log("Request failed. Returned status: " + xhr.status);
   }
