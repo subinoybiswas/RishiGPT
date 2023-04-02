@@ -44,8 +44,11 @@ app.post("/userdata", (req, res) => {
       frequency_penalty: 0,
       presence_penalty: 0,
     });
+    console.log("Rishi Answered: "+completion.data.choices[0].message.content)
     res.send(completion.data.choices[0].message.content);
+
   }
+  console.log("User Asked: "+question);
   main(question);
 });
 //createCompletion({
