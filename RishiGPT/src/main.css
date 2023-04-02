@@ -97,7 +97,7 @@ h2 {
     height: 40vw;
   }
   .res {
-    display: inline;
+    display: inline-block;
     align-items: center;
     justify-content: center;
     text-justify: center;
