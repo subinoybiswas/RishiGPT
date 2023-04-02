@@ -1,5 +1,5 @@
 const xhr = new XMLHttpRequest();
-var resp = document.getElementsByClassName("txt");
+var resp = document.getElementsByClassName("res");
 var search1 = document.getElementById("query");
 var query = document.getElementById("query").value;
 var loading = document.getElementsByClassName("loader");
