@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const { Configuration, OpenAIApi } = require("openai");
+let reqCount = 0;
 console.log(process.env.API_KEY);
 app.listen(3000, () => {
   console.log("Application started and Listening on port 3000");
@@ -44,11 +45,13 @@ app.post("/userdata", (req, res) => {
       frequency_penalty: 0,
       presence_penalty: 0,
     });
-    console.log("Rishi Answered: "+completion.data.choices[0].message.content)
-    res.send(completion.data.choices[0].message.content);
+    reqCount += 1;
 
+    console.log(reqCount + ") User Asked: " + ques);
+
+    res.send(completion.data.choices[0].message.content);
   }
-  console.log("User Asked: "+question);
+
   main(question);
 });
 //createCompletion({
