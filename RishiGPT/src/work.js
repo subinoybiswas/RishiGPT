@@ -1,5 +1,6 @@
 const xhr = new XMLHttpRequest();
 var resp = document.getElementsByClassName("txt");
+var search1 = document.getElementById("query");
 var query = document.getElementById("query").value;
 var loading = document.getElementsByClassName("loader");
 loading[0].hidden = true;
@@ -12,7 +13,7 @@ xhr.onload = function () {
   if (xhr.status === 200) {
     console.log(xhr.responseText);
     resp[0].innerHTML = xhr.responseText;
-    resp[0].scrollIntoView();
+    search1.scrollIntoView();
   } else {
     console.log("Request failed. Returned status: " + xhr.status);
   }

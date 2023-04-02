@@ -27,7 +27,7 @@ h2 {
   color: #8a0000b5;
   font-weight: normal;
 }
-@media screen and (min-width: 880px) {
+@media screen and (min-width: 1212px) {
   .search input {
     margin-top: 10px;
     border: none;
@@ -52,6 +52,7 @@ h2 {
   .res {
     display: inline-block;
     align-items: center;
+    align-self: center;
     justify-content: center;
     text-justify: center;
     width: 50vw;
@@ -62,6 +63,7 @@ h2 {
     padding: 10px;
     color: antiquewhite;
     border-radius: 20px;
+    white-space: pre-wrap;
   }
   .search input:focus {
     width: 55vw;
@@ -72,7 +74,7 @@ h2 {
     transition: 0.3s;
   }
 }
-@media screen and (max-width: 879px) {
+@media screen and (max-width: 1211px) {
   .search input {
     margin-top: 10px;
     border: none;
@@ -95,7 +97,7 @@ h2 {
     height: 40vw;
   }
   .res {
-    display: inline-block;
+    display: inline;
     align-items: center;
     justify-content: center;
     text-justify: center;
@@ -109,6 +111,7 @@ h2 {
     color: antiquewhite;
     border-radius: 20px;
     padding: 4px;
+    white-space: pre-wrap;
   }
   .search input:focus {
     width: 85vw;
@@ -139,18 +142,7 @@ button:active {
   box-shadow: none;
 }
 
-.ok {
-  position: fixed;
-  width: 35px;
-  height: 35px;
 
-  bottom: 0;
-  right: 0;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  border-radius: 100px;
-  padding: 2px;
-}
 
 .credit {
   position: relative;
@@ -177,9 +169,7 @@ button:active {
   width: 60px;
   height: 60px;
 }
-.txt {
-  margin: 8px;
-}
+
 #credit-img {
   width: 40px;
   height: 40px;
