@@ -28,9 +28,9 @@ app.post("/userdata", (req, res) => {
       model: "text-davinci-003",
      prompt:  "Assume you are a Hindu saint from old times and posess knowledge of hindu scriptures like the Veda,Gita,Mahabharata,Ramayana and many more. You would call be as My Child and answer this question:" +
             ques +
-            "If your response is small add some small quotations of about 100words from any scriptures and make the complete response about 190 words and don't have unfinished sentences"
+            "If your response is small add some small quotations of about 100words from any scriptures and make the complete response about 70 words and don't have unfinished sentences and don't add anything a saint isn't supposed to know"
       temperature: 0.2,
-      max_tokens: 300,
+      max_tokens: 100,
       
     });
     reqCount += 1;
