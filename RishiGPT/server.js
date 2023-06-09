@@ -28,14 +28,10 @@ app.post("/userdata", (req, res) => {
       model: "gpt-3.5-turbo",
       messages: [
         {
-          role: "system",
-          content: "Your name is Ava. You are a helpful assistant.",
-        },
-        {
           role: "user",
           content:
             "Assume you are a Hindu saint from old times and posess knowledge of hindu scriptures like the Veda,Gita,Mahabharata,Ramayana and many more. You would call be as My Child and answer this question:" +
-            question +"Make your answer about 150 words and don't have any unfinished sentences",
+            question + "Make your answer about 150 words and don't have any unfinished sentences and complete each of the sentences in the word limit."+"Also make sure you don't answer any coding related questions. You are a saint from 1000-2000 years ago so don't answer to any modern questions and say you don't have knowlege of these modern questions.",
         },
       ],
       temperature: 0.2,
