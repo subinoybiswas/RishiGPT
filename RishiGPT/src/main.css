@@ -113,7 +113,7 @@ h2 {
     padding: 4px;
     white-space: pre-wrap;
   }
-  .search input:focus {
+  .search input:focus,hover {
     width: 85vw;
     transition: 0.2s;
     height: 4vh;
@@ -134,7 +134,7 @@ button {
   box-shadow: 0 6px 6px #f36642;
   outline: none;
 }
-button:active {
+button:active,hover {
   /* set time duration to your needs */
   animation: gradient 100ms;
   background: #f88;
