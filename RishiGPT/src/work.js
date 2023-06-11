@@ -3,6 +3,12 @@ var resp = document.getElementsByClassName("res");
 var search1 = document.getElementById("query");
 var query = document.getElementById("query").value;
 var loading = document.getElementsByClassName("loader");
+
+function showError(){
+alert("Rishi is resting now");
+  loading[0].hidden = true;
+}
+
 loading[0].hidden = true;
 console.log(query);
 xhr.onloadstart = () => {
@@ -14,6 +20,7 @@ xhr.onload = function () {
     console.log(xhr.responseText);
     resp[0].innerHTML = xhr.responseText;
     search1.scrollIntoView();
+    setTimeout( function() { showError(); }, 10000);
   } else {
     console.log("Request failed. Returned status: " + xhr.status);
   }
