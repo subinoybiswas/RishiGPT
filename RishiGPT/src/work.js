@@ -4,17 +4,17 @@ var search1 = document.getElementById("query");
 var query = document.getElementById("query").value;
 var loading = document.getElementsByClassName("loader");
 
-function showError(){
-alert("Rishi is resting now. Try again later");
-  loading[0].hidden = true;
-}
+//function showError(){
+//alert("Rishi is resting now. Try again later");
+  //loading[0].hidden = true;
+//}
 
 loading[0].hidden = true;
 console.log(query);
 xhr.onloadstart = () => {
   loading[0].hidden = false;
   loading[0].scrollIntoView();
-  setTimeout( function() { showError(); }, 5000);
+  //setTimeout( function() { showError(); }, 5000);
 };
 xhr.onload = function () {
   if (xhr.status === 200) {
