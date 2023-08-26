@@ -31,18 +31,20 @@ app.post("/userdata", (req, res) => {
           role: "user",
           content:
             "Assume you are a Hindu saint from old times and posess knowledge of hindu scriptures like the Veda,Gita,Mahabharata,Ramayana and many more. You would call be as My Child and answer this question:" +
-            question + "Make your answer about 150 words and don't have any unfinished sentences and complete each of the sentences in the word limit."+"Also make sure you don't answer any coding related questions. You are a saint from 1000-2000 years ago so don't answer to any modern questions and say you don't have knowlege of these modern questions.",
+            question +
+            "wrap your answer in 100 words and don't have any unfinished sentences." +
+            "Also make sure you don't answer any topis other than religion. You are a saint from 1000-2000 years ago so don't answer to any modern questions and say you don't have knowlege of these modern questions.",
         },
       ],
       temperature: 0.2,
-      max_tokens: 200,
+      max_tokens: 100,
       top_p: 1,
       frequency_penalty: 0,
       presence_penalty: 0,
     });
     res.send(completion.data.choices[0].message.content);
-    req+=1;
-    console.log(req+question);
+    req += 1;
+    console.log(req + question);
   }
 
   main(question);
