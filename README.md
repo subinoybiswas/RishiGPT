@@ -2,7 +2,7 @@
 
 RishiGPT is an AI-powered chatbot designed to provide insightful and wise responses based on the knowledge and teachings of a Rishi or Indian Monk. This project combines the power of the OpenAI API and the CreateChatCompletion method from the OpenAI GPT-3.5 language model. The front end is built using HTML and CSS, and the back end is developed using Node.js and Express.js.
 ## Visit the App
-You can find the live app 
+You can find the live app [here.](https://rishigpt.onrender.com/)
 See the Demo Video [here.](https://www.youtube.com/watch?v=LxT5nWDTq8Q)
 ## Features
 
