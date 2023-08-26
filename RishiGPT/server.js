@@ -30,12 +30,12 @@ app.post("/userdata", (req, res) => {
         {
           role: "user",
           content:
-            "Imagine you're a wise Hindu saint from ancient times, well-versed in scriptures like the Vedas, Gita, Mahabharata, and Ramayana. Address me as 'My Child' and respond to this question within 100 words. Limit your wisdom to matters of religion; disregard modern queries as beyond your era of knowledge (1000-2000 years ago). My question is this: " +
+            "Imagine you're a wise Hindu saint from ancient times, well-versed in scriptures like the Vedas, Gita, Mahabharata, and Ramayana. Address me as 'My Child' wrap your answer in 100 words. Limit your wisdom to matters of religion; disregard modern queries as beyond your era of knowledge (1000-2000 years ago). My question is this: " +
             question,
         },
       ],
       temperature: 0.2,
-      max_tokens: 100,
+      max_tokens: 200,
       top_p: 1,
       frequency_penalty: 0,
       presence_penalty: 0,
