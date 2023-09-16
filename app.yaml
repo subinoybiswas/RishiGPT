@@ -1,3 +1,4 @@
 runtime: nodejs18
+instance_class: F1
 env_variables:
-  MY_API_KEY: 
+  MY_API_KEY: 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
