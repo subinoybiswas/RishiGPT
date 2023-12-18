@@ -3,7 +3,7 @@ var resp = document.getElementsByClassName("res");
 var search1 = document.getElementById("query");
 var query = document.getElementById("query").value;
 var loading = document.getElementsByClassName("loader");
-
+const searchbox = document.getElementsByClassName("search")[0];
 //function showError(){
 //alert("Rishi is resting now. Try again later");
 //loading[0].hidden = true;
@@ -29,6 +29,7 @@ xhr.onload = function () {
 xhr.onloadend = () => {
   loading[0].hidden = true;
 };
+
 function search() {
   query = document.getElementById("query").value;
   console.log("Working!");
@@ -38,3 +39,13 @@ function search() {
   xhr.send(data);
   console.log(query);
 }
+searchbox.addEventListener("keypress", function (event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    search();
+    console.log("Meow");
+  }
+});

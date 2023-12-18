@@ -55,15 +55,17 @@ h2 {
     align-self: center;
     justify-content: center;
     text-justify: center;
-    width: 50vw;
+    width: 55vw;
     height: auto;
-    max-height: 100vh;
+    max-height: 80vh;
+    overflow-y: scroll;
     background-color: rgba(2, 36, 36, 0.621);
     margin-top: 10px;
     padding: 10px;
     color: antiquewhite;
     border-radius: 20px;
     white-space: pre-wrap;
+    scrollbar-width: thin;
   }
   .search input:focus {
     width: 55vw;
@@ -141,8 +143,6 @@ button:active {
   color: #fff;
   box-shadow: none;
 }
-
-
 
 .credit {
   position: relative;
