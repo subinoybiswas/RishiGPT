@@ -36,10 +36,10 @@ npm install
 ```
 
 4.
-   a) Configure OpenAI API:
+a) Configure OpenAI API:
    - Sign up for an account and obtain an API key from the [](https://platform.openai.com/signup).
-   - Replace the placeholder value for `BARD_API_KEY` in the environment variables section on your device
-   b) Configure Gemini Pro API:
+   - Replace the placeholder value for `BARD_API_KEY` in the environment variables section on your system)
+b) Configure Gemini Pro API:
    - Sign up for an account and obtain an API key from the [Google MakerSuite Portal](https://makersuite.google.com/waitlist).
    - Replace the placeholder value for `BARD_API_KEY` in the environment variables section on your device
 6. Start the development server:
