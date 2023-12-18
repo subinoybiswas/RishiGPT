@@ -8,9 +8,9 @@ RishiGPT is an AI-powered chatbot designed to provide insightful and wise respon
 
 - Conversational Interface: Users can engage in a natural language conversation with RishiGPT, asking questions or seeking advice on various topics.
 - Wisdom of a Rishi: RishiGPT leverages the extensive knowledge and teachings of a Rishi, providing thoughtful and insightful responses to user queries.
-- OpenAI API Integration: The chatbot uses the OpenAI API and the CreateChatCompletion method to generate responses based on user inputs.
+- Bard API Integration: The chatbot uses the GenerativeAI API and the GenerateContent method to generate responses based on user inputs.
 - Easy to Use: The chatbot interface is intuitive and user-friendly, making it accessible to many users.
-- Backend Integration: The backend is built using Node.js and Express.js, enabling seamless communication between the frontend and OpenAI API. 
+- Backend Integration: The backend is built using Node.js and Express.js, enabling seamless communication between the frontend and Generative AI API from Google. 
 
 ## Installation
 
