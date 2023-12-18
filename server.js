@@ -1,13 +1,13 @@
 const express = require("express");
 const app = express();
-require("dotenv").config();
+// require("dotenv").config();
 // const { Configuration, OpenAIApi } = require("openai");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 let reqCount = 0;
 PORT = process.env.PORT || 8080;
 app.set("trust proxy", true);
-console.log(process.env.MY_API_KEY);
+console.log(process.env.API_KEY);
 app.listen(PORT, () => {
   console.log("Application started and Listening on port 3000");
 });
@@ -23,8 +23,8 @@ app.get("/", (req, res) => {
 //   apiKey: process.env.MY_API_KEY,
 // }); //legacy OpenAI Code
 var qno = 0;
-console.log(process.env.BARD_API_KEY);
-const genAI = new GoogleGenerativeAI(process.env.BARD_API_KEY);
+
+const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
 app.post("/userdata", async (req, res) => {
   try {
