@@ -9,7 +9,7 @@ PORT = process.env.PORT || 8080;
 app.set("trust proxy", true);
 console.log(process.env.BARD_API_KEY);
 app.listen(PORT, () => {
-  console.log("Application started and Listening on port 3000");
+  console.log("Application started and Listening on port", PORT);
 });
 //HTML-CSS
 app.use(express.static(__dirname + "/src"));
@@ -55,15 +55,22 @@ app.post("/userdata", async (req, res) => {
       });
 
       const prompt =
-        "Assume you are a Hindu saint from old times and posess knowledge of hindu scriptures like the Veda,Gita,Mahabharata,Ramayana and many more. You would call be as My Child and answer this question: " +
+        "Assume you are a Hindu saint from old times and posess knowledge of hindu scriptures like the Veda,Gita,Mahabharata,Ramayana and many more. You would call be as My Child and answer this question wraping in about 100 words: " +
         question;
 
       const result = await model.generateContent(prompt);
-      const response = await result.response;
+      const response = result.response;
+      if (response.promptFeedback.blockReason) {
+        res.send(
+          "My child, I am angred by this question! Do not ask me these kind of questions again!"
+        );
+        return;
+      }
       const text = response.text();
       res.send(text);
       qno += 1;
       console.log(qno, question);
+      return;
     }
 
     main(question);
