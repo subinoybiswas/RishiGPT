@@ -5,16 +5,17 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const genAI = new GoogleGenerativeAI(process.env.BARD_API_KEY);
 const PORT = process.env.PORT || 8080;
 
-app.use(express.static("./src"));
+app.use(express.static("src"));
 app.use(express.json());
 
 app.listen(PORT, () => {
   console.log("Application started and Listening on port", PORT);
 });
-app.get("/", (req, res) => {
-  
-  res.sendFile("./src/index.html");
+
+app.get("*", (req, res) => {
+  res.sendFile("index.html", { root: "src" });
 });
+
 app.post("/userdata", async (req, res) => {
   try {
     const question = req.body.query;

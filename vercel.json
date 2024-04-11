@@ -1,17 +1,14 @@
 {
   "version": 2,
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
   "builds": [
     {
-      "src": "./server.js",
+      "src": "server.js",
       "use": "@vercel/node"
     },
     {
       "use": "@vercel/static",
-      "config": {
-        "source": "./src",
-        "basePath": ""
-      }
+      "source": "src",
+      "basePath": ""
     }
   ]
 }
