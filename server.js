@@ -1,20 +1,21 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
+require("dotenv").config();
 
-const genAI = new GoogleGenerativeAI(process.env.BARD_API_KEY);
-const PORT = process.env.PORT || 8080;
-
-app.use(express.static("src"));
+const genAI = new GoogleGenerativeAI("AIzaSyAT8hfJybW4ERq_U1ViwOSuSDq6r6dpSSk");
+console.log(process.env.BARD_API_KEY);
+// const PORT = process.env.PORT || 8080;
 app.use(express.json());
 
-app.listen(PORT, () => {
-  console.log("Application started and Listening on port", PORT);
-});
+app.use(cors());
 
-app.get("*", (req, res) => {
-  res.sendFile("index.html", { root: "src" });
-});
+// app.use(express.static("../public"));
+
+// app.listen(PORT, () => {
+//   console.log("Application started and Listening on port", PORT);
+// });
 
 app.post("/userdata", async (req, res) => {
   try {
@@ -45,3 +46,6 @@ app.post("/userdata", async (req, res) => {
     res.status(500).send("Internal Server Error");
   }
 });
+// app.listen(5000, () => console.log("Server ready on port 3000."));
+
+module.exports = app;
