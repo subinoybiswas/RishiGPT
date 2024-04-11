@@ -11,7 +11,10 @@ app.use(express.json());
 app.listen(PORT, () => {
   console.log("Application started and Listening on port", PORT);
 });
-
+app.get("/", (req, res) => {
+  
+  res.sendFile("./src/index.html");
+});
 app.post("/userdata", async (req, res) => {
   try {
     const question = req.body.query;
